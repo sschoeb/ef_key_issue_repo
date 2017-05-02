@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EFCompositeKeyTest.DataModel.TestContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="GeneratedEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="EFCompositeKeyTest.DataModel.TestContextModel.Customers" />
+    <EntitySet Name="Orders" EntityType="EFCompositeKeyTest.DataModel.TestContextModel.Orders" />
+    <AssociationSet Name="FK_dbo_Orders_dbo_Customers_CustomerId_DomainId" Association="EFCompositeKeyTest.DataModel.TestContextModel.FK_dbo_Orders_dbo_Customers_CustomerId_DomainId">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+      <PropertyRef Name="DomainId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="DomainId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="EFCompositeKeyTest.DataModel.TestContextModel.FK_dbo_Orders_dbo_Customers_CustomerId_DomainId" FromRole="Customers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+      <PropertyRef Name="DomainId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="DomainId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Customers" Relationship="EFCompositeKeyTest.DataModel.TestContextModel.FK_dbo_Orders_dbo_Customers_CustomerId_DomainId" FromRole="Orders" ToRole="Customers" />
+  </EntityType>
+  <Association Name="FK_dbo_Orders_dbo_Customers_CustomerId_DomainId">
+    <End Type="EFCompositeKeyTest.DataModel.TestContextModel.Customers" Role="Customers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EFCompositeKeyTest.DataModel.TestContextModel.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerId" />
+        <PropertyRef Name="DomainId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="CustomerId" />
+        <PropertyRef Name="DomainId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

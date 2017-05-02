@@ -1,0 +1,10 @@
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\bin\Debug\EFCompositeKeyTest.exe.config
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\bin\Debug\EFCompositeKeyTest.exe
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\bin\Debug\EFCompositeKeyTest.pdb
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\bin\Debug\EntityFramework.dll
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\bin\Debug\EntityFramework.xml
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\obj\Debug\EFCompositeKeyTest.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\obj\Debug\EFCompositeKeyTest.exe
+C:\Users\Stefan\Downloads\EFCompositeKeyTest\EFCompositeKeyTest\EFCompositeKeyTest\obj\Debug\EFCompositeKeyTest.pdb
